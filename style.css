@@ -1,0 +1,72 @@
+
+:root
+{
+    --primary-color:white;
+    --spacing:20px;
+}
+
+
+#modal-button
+{
+    padding:20px 30px;
+    background:black;
+    color:white;
+    font-size: 2rem;
+}
+
+span
+{
+    display:inline-block;
+    font-size: 2.5rem;
+    color:var(--primary-color);
+   padding:10px 20px;
+}
+
+input[type="image"]
+{
+    width:30px;
+    float:right;
+    padding:var(--spacing);
+}
+
+.modal-container
+{
+    display:grid;
+    grid-template-columns: 800px;
+    grid-template-rows: 70px 100px 70px;
+    grid-gap:0px;
+    grid-template-areas: 
+    "header"
+    "body"
+    "footer";
+    margin-top:50px;
+}
+
+
+
+.header
+{
+    grid-area:header;
+    background:red;
+}
+
+.body
+{
+    grid-area:body;
+    background:grey;
+}
+
+.footer
+{
+    grid-area:footer;
+    background:red;
+}
+
+.paragraph
+{
+    font-size: 2rem;
+    color:black;
+    font-weight: 700;
+    padding:var(--spacing);
+}
+
