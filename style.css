@@ -2,7 +2,7 @@
 :root
 {
     --primary-color:white;
-    --spacing:20px;
+    --spacing:10px;
 }
 
 
@@ -31,7 +31,7 @@ input[type="image"]
 
 .modal-container
 {
-    display:grid;
+    display:none;
     grid-template-columns: 800px;
     grid-template-rows: 70px 100px 70px;
     grid-gap:0px;
@@ -39,9 +39,22 @@ input[type="image"]
     "header"
     "body"
     "footer";
-    margin-top:50px;
+    
+   margin-left:300px;
+  
+   
+   
+   
 }
 
+
+.open.modal-container
+{
+    display:grid;
+    animation: moveContainer 0.5s;
+    transform: translateY(100px);
+    
+}
 
 
 .header
@@ -60,13 +73,38 @@ input[type="image"]
 {
     grid-area:footer;
     background:red;
+    font-size:2rem;
+    
+    
+
+}
+
+.footer p
+{
+    margin:0px;
+    padding:var(--spacing);
+    color:white
 }
 
 .paragraph
 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color:black;
     font-weight: 700;
     padding:var(--spacing);
+    margin:0px;
+}
+
+@keyframes moveContainer
+{
+    0%
+    {
+        transform:translateY(-340px);
+    }
+
+    100%
+    {
+        transform:translateY(100px);
+    }
 }
 

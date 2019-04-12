@@ -3,6 +3,25 @@
 <head>
 <link href="style.css" rel="stylesheet" type="text/css">
 
+<script>
+
+ function openModalContainer()
+ {
+    const modalContainer = document.querySelector(".modal-container");
+
+    modalContainer.classList.add("open");
+    
+ }
+
+ function closeModalContainer()
+ {
+    const modalContainer = document.querySelector(".modal-container");
+
+     modalContainer.classList.remove("open");   
+ }
+    
+</script>
+
 </head>
 
 <body>
@@ -14,7 +33,7 @@
         <div class="header">
         
             <span> Modal Header</span>
-            <input type="image" src="iconfinder_close16_216470.svg">
+            <input type="image" src="iconfinder_close16_216470.svg" id="close">
 
         </div>
 
@@ -27,6 +46,16 @@
          <p> Modal Footer</p>
         </div>
     </div>
+
+    <script>
+        
+       const modalButton = document.querySelector("#modal-button");
+       const closebutton = document.querySelector("#close");
+
+       modalButton.addEventListener("click",openModalContainer);
+       closebutton.addEventListener("click",closeModalContainer);
+
+    </script>
 </body>
 
 </html>
