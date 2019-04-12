@@ -28,6 +28,12 @@ input[type="image"]
     float:right;
     padding:var(--spacing);
 }
+.modal-content
+{
+    border:5px solid blue;
+    width:100%;
+    height:100px;
+}
 
 .modal-container
 {
@@ -40,11 +46,17 @@ input[type="image"]
     "body"
     "footer";
     
-   margin-left:300px;
+   padding-left:400px;
+   position:fixed;
+   top:0;
+   left:0;
   
-   
-   
-   
+  
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+  overflow: auto;
+
+ 
 }
 
 
@@ -53,6 +65,7 @@ input[type="image"]
     display:grid;
     animation: moveContainer 0.5s;
     transform: translateY(100px);
+    height:100%;
     
 }
 
@@ -74,9 +87,6 @@ input[type="image"]
     grid-area:footer;
     background:red;
     font-size:2rem;
-    
-    
-
 }
 
 .footer p

@@ -30,7 +30,9 @@
 
     <div class="modal-container">
 
-        <div class="header">
+       
+       
+            <div class="header">
         
             <span> Modal Header</span>
             <input type="image" src="iconfinder_close16_216470.svg" id="close">
@@ -46,14 +48,28 @@
          <p> Modal Footer</p>
         </div>
     </div>
+    </div>
 
     <script>
         
        const modalButton = document.querySelector("#modal-button");
        const closebutton = document.querySelector("#close");
+       const modalWindow = document.querySelector(".modal-container");
 
        modalButton.addEventListener("click",openModalContainer);
        closebutton.addEventListener("click",closeModalContainer);
+
+       modalWindow.addEventListener("click",e=>
+       {
+         if(e.target.closest("div").classList.contains("modal-container"))
+         {
+            closeModalContainer();
+         }
+       })
+      
+
+     
+       
 
     </script>
 </body>
