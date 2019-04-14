@@ -1,4 +1,4 @@
-
+/* SELECTOR AND MAIN CLASSES */
 :root
 {
     --primary-color:white;
@@ -28,6 +28,16 @@ input[type="image"]
     float:right;
     padding:var(--spacing);
 }
+.paragraph
+{
+    font-size: 1.8rem;
+    color:black;
+    font-weight: 700;
+    padding:var(--spacing);
+    margin:0px;
+}
+
+/* COMPONENT STYLE */
 .modal-content
 {
     border:5px solid blue;
@@ -59,17 +69,6 @@ input[type="image"]
  
 }
 
-
-.open.modal-container
-{
-    display:grid;
-    animation: moveContainer 0.5s;
-    transform: translateY(100px);
-    height:100%;
-    
-}
-
-
 .header
 {
     grid-area:header;
@@ -96,13 +95,15 @@ input[type="image"]
     color:white
 }
 
-.paragraph
+/* ANIMATION */
+
+.open.modal-container
 {
-    font-size: 1.8rem;
-    color:black;
-    font-weight: 700;
-    padding:var(--spacing);
-    margin:0px;
+    display:grid;
+    animation: moveContainer 0.5s;
+    transform: translateY(100px);
+    height:100%;
+    
 }
 
 @keyframes moveContainer
